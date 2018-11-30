@@ -8,23 +8,23 @@ if($_SESSION['logged-in'] !== true){
 	echo("You are not allowed to view this page");
 	?><a href="login.html">Go to login</a><?php
 }else{
-	
-	
+
+
 	$dbusername = "razaalin_alina";
 	$dbpassword = "iZKoDeSbtiPLYSGT";
 	$pdo = new PDO("mysql:host=localhost;dbname=razaalin_teamultramega", $dbusername, $dbpassword);
 
 	$stmt = $pdo->prepare("SELECT * FROM `chefs` WHERE 1");
-	
+
 	$stmt->execute();
 ?>
 
 <?php include '../header.php' ?>
 
 <section>
-<form action="processes/update-chef.php" method="POST"> 
+<form action="processes/update-chef.php" method="POST">
 <h2>Welcome To Your Profile</h2>
-<?php $row = $stmt->fetch();   ?>  
+<?php $row = $stmt->fetch();   ?>
 <!-- <fieldset>
 	<label>Title:</label><input type='text' name='title' value="<?php echo($row['title']); ?>"/><br>
 	<label>Paragraph:</label> <textarea rows="10" type='text' name='paragraph' ><?php echo($row['paragraph']); ?></textarea><br>
