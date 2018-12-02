@@ -49,6 +49,7 @@ if($_SESSION['logged-in'] !== true){
 </section>
 
 <section class="activePosts">
+	<h3>Current Posts</h3>
 	<?php
 	while($row=$stmt2->fetch()) {
 	?>
