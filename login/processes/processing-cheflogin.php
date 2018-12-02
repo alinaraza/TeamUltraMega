@@ -4,6 +4,7 @@ $email = $_POST['email'];
 $password = $_POST['password'];
 
 
+
 //check admin table for valid username and password
 $dbusername = "razaalin_alina";
 $dbpassword = "iZKoDeSbtiPLYSGT";
@@ -11,8 +12,8 @@ $dbpassword = "iZKoDeSbtiPLYSGT";
 $pdo = new PDO("mysql:host=localhost; dbname=razaalin_teamultramega", $dbusername, $dbpassword);
 
 $stmt = $pdo->prepare("
-	SELECT * FROM `chefs` 
-		WHERE `email` = '$email' 
+	SELECT * FROM `chefs`
+		WHERE `email` = '$email'
 		AND `password` = '$password'");
 
 $stmt->execute();
@@ -22,6 +23,7 @@ if($row = $stmt->fetch()){
 	$_SESSION['logged-in'] = true;
 	$_SESSION['username'] = $row['firstname'];
 	$_SESSION['usertype'] = 'chef';
+	$_SESSION['id'] = $row['userID'];
 
 	header("Location: /TeamUltraMega/profile/");
 
@@ -33,6 +35,7 @@ else{
 
 echo $_SESSION['usertype'];
 echo $_SESSION['username'];
-	
+echo $_SESSION['id'];
+
 
 ?>
