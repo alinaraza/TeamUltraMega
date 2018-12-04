@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //perform a delete on a record
 //receive id of record to delete.
 
