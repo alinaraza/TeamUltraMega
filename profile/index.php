@@ -16,7 +16,7 @@ if($_SESSION['logged-in'] !== true){
 	$pdo = new PDO("mysql:host=localhost;dbname=razaalin_teamultramega", $dbusername, $dbpassword);
 
 	$stmt = $pdo->prepare("SELECT * FROM `chefs` WHERE `userID` = $id");
-	$stmt2 = $pdo->prepare("SELECT `chefs`.`userID`,`food`.`foodName`,`food`.`description`,`food`.`foodID`
+	$stmt2 = $pdo->prepare("SELECT `chefs`.`userID`,`food`.`foodName`,`food`.`description`,`food`.`image`,`food`.`foodID`
 	FROM `chefs` INNER JOIN `food` ON `chefs`.`userID` = `food`.`chefID`");
 	$stmt->execute();
 	$stmt2->execute();
@@ -28,7 +28,7 @@ if($_SESSION['logged-in'] !== true){
 <!-- <form action="processes/update-chef.php" method="POST"> -->
 <h2>Welcome To Your Profile</h2>
 <?php echo($_SESSION['username']);?>
-<?php echo($id);?>
+<?php echo($_SESSION['id']);?>
 <!-- <fieldset>
 	<label>Title:</label><input type='text' name='title' value="<?php echo($row['title']); ?>"/><br>
 	<label>Paragraph:</label> <textarea rows="10" type='text' name='paragraph' ><?php echo($row['paragraph']); ?></textarea><br>
@@ -54,6 +54,7 @@ if($_SESSION['logged-in'] !== true){
 	while($row=$stmt2->fetch()) {
 	?>
 	<div class="post">
+			
 			<p>Food: <?php echo($row["foodName"]);?> </p>
 			<p>Description: <?php echo($row["description"]);?> </p>
 			<br>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 //receive values user submitted from form
-$image = $_POST['image'];
+$image = $_POST['fileToUpload'];
 $food = $_POST['food'];
 $chef = $_POST['chef'];
 $chefID = $_POST['chefID'];
@@ -18,4 +18,5 @@ $stmt = $pdo->prepare("INSERT INTO `food` (`foodID`, `foodName`, `description`, 
 $stmt->execute();
 
 header("Location: ../");
+
 ?>

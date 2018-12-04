@@ -53,7 +53,7 @@ if($_SESSION['logged-in'] !== true){
 			Description: <textarea name="desc" rows="8" cols="80" wrap="soft"><?php echo($row["description"]);?></textarea>
 			<br>
 			<br>
-			<input type="submit" value="Submit"/>
+			<button type="submit" name="button">Submit</button>
 			<input name="chefID" type="hidden" value="<?php echo($_SESSION['id']);?>">
       <input name="id" type="hidden" value="<?php echo($row["foodID"]); ?>">
 	</form>

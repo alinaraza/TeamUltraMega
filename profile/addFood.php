@@ -41,8 +41,8 @@ if($_SESSION['logged-in'] !== true){
 </section>
 
 <div class="addFood">
-	<form id="insertFood" action="processes/process-foodInsert.php" method="post">
-			Image: <input type="text" name="image"/>
+	<form id="insertFood" action="processes/process-foodInsert.php"  enctype="multipart/form-data" method="post">
+			Image: <input type="file" name="fileToUpload" id="fileToUpload">
 			<br>
 			<br>
 			Food: <input type="text" name="food"/>
@@ -54,7 +54,7 @@ if($_SESSION['logged-in'] !== true){
 			Description: <textarea name="desc" rows="8" cols="80" wrap="soft"></textarea>
 			<br>
 			<br>
-			<input type="submit" value="Submit"/>
+			<button type="submit" name="button">Submit</button>
 			<input name="chefID" type="hidden" value="<?php echo($_SESSION['id']);?>">
 	</form>
   <a href="index.php">Cancel</a>
