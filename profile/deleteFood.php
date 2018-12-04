@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //confirm delete record
 $id = $_GET['id'];
 
