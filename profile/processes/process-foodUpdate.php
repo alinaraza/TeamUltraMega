@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $id = $_POST['id'];
 $food = $_POST['food'];
 $desc = $_POST['desc'];
