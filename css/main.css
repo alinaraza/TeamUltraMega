@@ -1,21 +1,21 @@
 body {
-	font-family: 'Montserrat', sans-serif;
-	margin: unset;
+    font-family: 'Montserrat', sans-serif;
+    margin: unset;
 }
 
 nav {
     flex-direction: row;
     justify-content: space-between;
-	background-color: #35D3C7;
-	padding: 20px 5%;
+    background-color: #35D3C7;
+    padding: 20px 5%;
 }
 
 nav ul li {
-	padding-left: 30px; 
+    padding-left: 30px; 
 }
 
 ul, li{
-	display:inline;
+    display:inline;
 }
 
 ul {
@@ -42,44 +42,38 @@ a{
     color:#707070
 }
 h1 {
-	font-size: 45px;
-	color: #35D3C7;	
+    font-size: 45px;
+    color: #35D3C7; 
 }
 
 
 
-/* nav div{
-    
-     flex-direction: row;
-    justify-content: space-between;
-} */
-
 .foodContainer {
-	display: flex;
-	justify-content: space-between;
-	padding: 1%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
     transition: 0.2s;
 }
 
 .foodContainer a{
-	text-decoration: none;
-	width: 45vw;
+    text-decoration: none;
+    width: 45vw;
 }
 
 .itemContainer:hover {
-	background: #e6e6e6;
+    background: #e6e6e6;
 }
 .itemContainer {
-	padding: 1%;
-	width: 33%;
+    padding: 1%;
+    width: 33%;
 }
 .foodContainer food{
-	padding: 1%;
-	width: 50%;
+    padding: 1%;
+    width: 50%;
 }
 
 .itemContainer img {
-	width: 100%;
+    width: 100%;
     height: 300px;
     object-fit: cover;
     margin: auto;
@@ -88,23 +82,23 @@ h1 {
 
 .food {
     padding: 1%;
-	display: flex;
+    display: flex;
     flex-direction: column;
 }
 
 .foodDescription {
-	color:#FFFFFF;
-	background-color: #35D3C7;
-	padding: 1% 6%;
+    color:#FFFFFF;
+    background-color: #35D3C7;
+    padding: 1% 6%;
 }
 
 .foodDescription h4{
-	color:#FFFFFF;
-	background-color: #35D3C7;
+    color:#FFFFFF;
+    background-color: #35D3C7;
 }
 
 section {
-	padding: 2% 5%;
+    padding: 2% 5%;
 }
 
 .searchbar input {
@@ -124,7 +118,7 @@ section {
 }
 
 section {
-	padding: 2% 5%;
+    padding: 2% 5%;
 }
 
 .chooselogin a{
@@ -132,7 +126,7 @@ section {
 
 }
 .login {
-	display: flex;
+    display: flex;
     padding: 2%;
     justify-content: center;
     margin: 1% 25%;
@@ -141,16 +135,16 @@ section {
 input, textarea {
     background: #f7fafb;
     border-radius: 100px;
-	width: -webkit-fill-available;
-	padding: 1%;
-	border: none;
-	font-size: 1em;
+    width: -webkit-fill-available;
+    padding: 1%;
+    border: none;
+    font-size: 1em;
     
-	
+    
 }
 
 form fieldset, form {
-	display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: right;
     padding:5%;
@@ -161,7 +155,7 @@ form fieldset, form {
 }
 
 form fieldset label {
-	font-size: 0.8em;
+    font-size: 0.8em;
 }
 
 
@@ -169,21 +163,45 @@ button {
     padding: 10px 20px;
     background:  #35D3C7;
     color: white;
-	transition: 0.2s;
-	margin-left: auto; 
+    transition: 0.2s;
+    margin-left: auto; 
     font-size: 1em;
     border-radius:10px;
     border:none;
+    
 }
 
 button:hover{
-	background:  rgb(33, 167, 155);
+    background:  rgb(33, 167, 155);
 }
 
-.chefBar {
-	text-align: right;
-    background:  #707070;
-    color: white;
-    font-size: 0.8em;
-    padding: 1%;
+.chefmenu{ 
+  background-color: #707070;
+  color:white;
+  width: 200px;
+  height:100vh;
+  top:59px;
+  left: 0;
+  bottom: 0;
+  align-items: center;
+  padding: 20px 20px 20px 20px
 }
+
+.chefOptions button{
+    margin:5%;
+    width:100%;
+}
+
+.chefOptions a{
+   color:white;
+   text-decoration: none
+}
+
+.profileimg{
+    width: 100%
+}
+.posts{
+    margin-top: 100px;
+    margin-left: 300px; /* Add a top margin to avoid content overlay */
+}
+
